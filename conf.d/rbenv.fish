@@ -1,3 +1,8 @@
+if not command -s rbenv
+    echo "rbenv: command not found. See https://github.com/rbenv/rbenv"
+    exit 1
+end
+
 set -l rbenv_root (rbenv root)
 set -x PATH $rbenv_root/shims $PATH
 set -x RBENV_SHELL fish

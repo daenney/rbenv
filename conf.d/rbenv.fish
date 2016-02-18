@@ -6,6 +6,7 @@ end
 set -l rbenv_root ''
 if test -z "$RBENV_ROOT"
     set rbenv_root "$HOME/.rbenv"
+    set -x RBENV_ROOT "$HOME/.rbenv"
 else
     set rbenv_root "$RBENV_ROOT"
 end

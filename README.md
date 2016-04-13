@@ -1,4 +1,4 @@
-# fish-rbenv
+# Rbenv [![Slack Room][slack-badge]][slack-link]
 
 Rbenv plugin for the Fish shell.
 
@@ -10,3 +10,7 @@ when `rbenv` gets called.
 ## Install
 
 * fisherman: `fisher install rbenv`.
+* fin: `fin rbenv`.
+
+[slack-link]: https://fisherman-wharf.herokuapp.com/
+[slack-badge]:  https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square

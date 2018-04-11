@@ -19,12 +19,14 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+set __rbenv_sh_commands (command rbenv commands --sh)
+
 function rbenv
   set command $argv[1]
   set -e argv[1]
 
   switch "$command"
-  case rehash shell
+  case $__rbenv_sh_commands
     source (rbenv "sh-$command" $argv|psub)
   case '*'
     command rbenv "$command" $argv

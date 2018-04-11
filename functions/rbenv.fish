@@ -27,7 +27,7 @@ function rbenv
 
   switch "$command"
   case $__rbenv_sh_commands
-    source (rbenv "sh-$command" $argv|psub)
+    source (command rbenv "sh-$command" $argv|psub)
   case '*'
     command rbenv "$command" $argv
   end

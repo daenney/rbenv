@@ -24,8 +24,8 @@ function rbenv
   set -e argv[1]
 
   switch "$command"
-  case rehash shell
-    source (rbenv "sh-$command" $argv|psub)
+  case (command rbenv commands --sh)
+    source (command rbenv "sh-$command" $argv|psub)
   case '*'
     command rbenv "$command" $argv
   end
